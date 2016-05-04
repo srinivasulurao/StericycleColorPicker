@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartArguments>launch=https://stericyclecschat.custhelp.com/cgi-bin/stericyclecschat.cfg dbname=dbva03b uname=srinivasulu pword=ATG2dfPQ auto=true</StartArguments>
+    <StartAction>Program</StartAction>
+    <StartProgram>C:\Users\nra\AppData\Local\Apps\2.0\Q94CHJEY.44L\Z5HRNKR9.QY5\righ..chat_0dd5c061fc4ec114_0010.0002_ee14ecfee1fbbfe8\RightNow.CX.exe</StartProgram>
+  </PropertyGroup>
+</Project>

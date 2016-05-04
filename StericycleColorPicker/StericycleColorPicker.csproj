@@ -1,0 +1,515 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C1AEEC0A-D582-4792-B315-7A165172F6E8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StericycleColorPicker</RootNamespace>
+    <AssemblyName>StericycleColorPicker</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="RightNow.AddIns.AddInViews">
+      <HintPath>..\..\..\..\..\AppData\Roaming\RightNow_Technologies\dellusalp\15.11.2256.217\RightNow.AddIns.AddInViews.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.AddIn" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RightNowCWS.cs" />
+    <Compile Include="Service References\RNOWServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="StericycleColorPicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyUtilities\CBO.cs" />
+    <Compile Include="MyUtilities\CSVHelper.cs" />
+    <Compile Include="MyUtilities\CustomGenNamedIDHierarchy.cs" />
+    <Compile Include="MyUtilities\CWS.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\AccessLevelType.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\Account.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\AccountNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\AccountOptions.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\AccountSalesSettings.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\AccountSalesSettingsNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\AccountServiceSettings.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ActionEnum.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\Address.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\AddressNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\AnalyticsReport.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\AnalyticsReportColumn.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\AnalyticsReportFilter.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\AnalyticsReportFilterAttributes.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\AnalyticsReportSearchFilter.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\Answer.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\AnswerLink.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\AnswerLinkNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\AnswerNotification.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\AnswerNotificationNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\AnswerNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\Asset.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\AssetNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\AssetSLAInstance.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\AssetStatus.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\AssetStatuses.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\AssignedSLAInstance.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\AssignedSLAInstanceNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\Banner.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\BannerNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\BatchRequest.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\BatchRequestItem.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\BatchResponse.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\BatchResponseItem.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\CategoryNotification.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\CategoryNotificationNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ChainDestinationID.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ChainSourceID.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ChannelType.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ChannelTypeOptions.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ChannelUsername.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ChannelUsernameNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ClientInfoHeader.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\Configuration.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\Contact.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ContactMarketingSettings.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ContactMarketingSettingsNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ContactNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ContactOpenIDAccount.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ContactSalesSettings.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ContactSalesSettingsNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ContactServiceSettings.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ContactServiceSettingsNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ConvertGenericToObjectRequest.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ConvertGenericToObjectResponse.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ConvertObjectToGenericRequest.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ConvertObjectToGenericResponse.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\Country.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\CountryNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\CreateMsg.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\CreateProcessingOptions.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\CreateRequest.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\CreateResponse.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\CreateResponseMsg.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\CRMModules.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\CSVTable.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\CSVTableSet.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\DataTypeEnum.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\DataValue.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\DestroyMsg.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\DestroyProcessingOptions.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\DestroyRequest.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\DestroyResponse.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\DestroyResponseMsg.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\Email.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ExceptionCode.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ExecuteMarketingFlowMsg.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ExecuteMarketingFlowRequest.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ExecuteMarketingFlowResponse.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ExecuteMarketingFlowResponseMsg.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\FileAttachment.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\FileAttachmentAnswer.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\FileAttachmentCommon.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\FileAttachmentIncident.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\FileAttachmentShared.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\GenericField.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\GenericObject.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\GetFileDataMsg.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\GetFileDataRequest.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\GetFileDataResponse.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\GetFileDataResponseMsg.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\GetMetaDataForClassMsg.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\GetMetaDataForClassRequest.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\GetMetaDataForClassResponse.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\GetMetaDataForClassResponseMsg.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\GetMetaDataLastChangeTimeMsg.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\GetMetaDataLastChangeTimeRequest.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\GetMetaDataLastChangeTimeResponse.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\GetMetaDataLastChangeTimeResponseMsg.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\GetMetaDataMsg.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\GetMetaDataRequest.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\GetMetaDataResponse.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\GetMetaDataResponseMsg.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\GetMsg.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\GetProcessingOptions.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\GetRequest.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\GetResponse.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\GetResponseMsg.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\GetValuesForNamedIDHierarchyMsg.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\GetValuesForNamedIDHierarchyRequest.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\GetValuesForNamedIDHierarchyResponse.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\GetValuesForNamedIDHierarchyResponseMsg.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\GetValuesForNamedIDMsg.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\GetValuesForNamedIDRequest.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\GetValuesForNamedIDResponse.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\GetValuesForNamedIDResponseMsg.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\GroupAccount.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\GroupAccountNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\Holiday.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\HolidayNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ID.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\Incident.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\IncidentContact.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\IncidentContactDelta.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\IncidentNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\InheritOptions.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\InterfaceValue.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ItemChoiceType.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ItemsChoiceType.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\Label.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\LabelNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\LabelRequired.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\Mailbox.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\MailboxIncomingEmailSettings.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\MailboxIncomingEmailSettingsNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\MailboxNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\MailboxOutgoingEmailSettings.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\MailboxOutgoingEmailSettingsNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\MarketingMailbox.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\MessageBase.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\MetaDataAttribute.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\MetaDataCardinalityEnum.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\MetaDataClass.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\MetaDataKeyTypeEnum.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\MetaDataNavigabilityEnum.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\MetaDataRelationship.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\MetaDataUsageEnum.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\MonetaryValue.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\MonetaryValueNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\NamedID.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\NamedIDDelta.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\NamedIDHierarchy.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\NamedIDWithParent.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\NamedReadOnlyID.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\Note.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\NoteNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\Opportunity.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\OpportunityContact.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\OpportunityContactDelta.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\OpportunityContactNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\OpportunityNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\Organization.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\OrganizationNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\OrganizationSalesSettings.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\OrganizationSalesSettingsNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\OrganizationServiceSettings.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\OrganizationServiceSettingsNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\PagingResponse.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\PersonFullName.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\PersonName.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\PersonNameNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\Phone.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ProductNotification.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ProductNotificationNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\Province.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\PurchasedProduct.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\PurchasedProductNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\QueryCSVRequest.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\QueryCSVResponse.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\QueryCSVResponseMsg.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\QueryMsg.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\QueryObjectsMsg.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\QueryObjectsRequest.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\QueryObjectsResponse.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\QueryObjectsResponseMsg.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\QueryResultData.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\Quote.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\QuoteLineItem.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\QuoteLineItemNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\QuoteNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\RequestErrorFaultType.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ResetContactPasswordMsg.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ResetContactPasswordRequest.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ResetContactPasswordResponse.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ResetContactPasswordResponseMsg.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\RightNowFedAuthSyncPort.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\RightNowFedAuthSyncPortChannel.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\RightNowFedAuthSyncPortClient.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\RightNowSyncPort.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\RightNowSyncPortChannel.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\RightNowSyncPortClient.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\RNFault.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\RNObject.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\RNObjectType.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\RunAnalyticsReportMsg.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\RunAnalyticsReportRequest.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\RunAnalyticsReportResponse.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\RunAnalyticsReportResponseMsg.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\SalesProduct.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\SalesProductNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\SalesProductOptions.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\SalesProductSchedule.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\SalesProductScheduleNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\SalesTerritory.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\SalesTerritoryNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\SendMailingToContactMsg.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\SendMailingToContactRequest.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\SendMailingToContactResponse.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\SendMailingToContactResponseMsg.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ServerErrorFaultType.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ServiceCategory.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ServiceCategoryDelta.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ServiceCategoryNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ServiceDisposition.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ServiceDispositionDelta.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ServiceDispositionNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ServiceMailbox.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ServiceProduct.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ServiceProductDelta.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ServiceProductNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\SharedFileAttachmentAnswer.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\SharedFileAttachmentCommon.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\SharedFileAttachmentIncident.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\SharedFileAttachmentShared.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\SiteInterface.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\SLAInstance.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\StageWithStrategy.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\StageWithStrategyNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\StandardContent.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\StandardContentAttributes.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\StandardContentContentValue.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\StandardContentContentValueNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\StandardContentNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\StandardContentUsage.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\StatusWithType.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\Task.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\TaskMarketingSettings.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\TaskMarketingSettingsNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\TaskNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\TaskSalesSettings.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\TaskSalesSettingsNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\TaskServiceSettings.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\TaskServiceSettingsNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\Thread.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\ThreadNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\TimeBilled.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\TimeBilledNullFields.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\TransferSubObjectsMsg.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\TransferSubObjectsRequest.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\TransferSubObjectsResponse.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\TransferSubObjectsResponseMsg.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\TypedAddress.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\UnexpectedErrorFaultType.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\UpdateMsg.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\UpdateProcessingOptions.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\UpdateRequest.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\UpdateResponse.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\UpdateResponseMsg.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\Variable.cs" />
+    <Compile Include="MyUtilities\CWS_14_8\VariableNullFields.cs" />
+    <Compile Include="MyUtilities\Profiler.cs" />
+    <Compile Include="MyUtilities\PSLog.cs" />
+    <Compile Include="MyUtilities\ServerSettings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ColorChooser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ColorChooser.Designer.cs">
+      <DependentUpon>ColorChooser.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ColorChooser.resx">
+      <DependentUpon>ColorChooser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl1.resx">
+      <DependentUpon>ColorChooser.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\AddIn32.png" />
+    <None Include="Service References\RNOWServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\RNOWServiceReference\configuration.svcinfo" />
+    <None Include="Service References\RNOWServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\RNOWServiceReference\StericycleColorPicker.RNOWServiceReference.BatchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RNOWServiceReference\StericycleColorPicker.RNOWServiceReference.BatchResponseItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RNOWServiceReference\StericycleColorPicker.RNOWServiceReference.ConvertGenericToObjectResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RNOWServiceReference\StericycleColorPicker.RNOWServiceReference.ConvertObjectToGenericResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RNOWServiceReference\StericycleColorPicker.RNOWServiceReference.CreateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RNOWServiceReference\StericycleColorPicker.RNOWServiceReference.CSVTableSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RNOWServiceReference\StericycleColorPicker.RNOWServiceReference.DestroyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RNOWServiceReference\StericycleColorPicker.RNOWServiceReference.ExecuteMarketingFlowResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RNOWServiceReference\StericycleColorPicker.RNOWServiceReference.GetFileDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RNOWServiceReference\StericycleColorPicker.RNOWServiceReference.GetMetaDataForClassResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RNOWServiceReference\StericycleColorPicker.RNOWServiceReference.GetMetaDataForOperationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RNOWServiceReference\StericycleColorPicker.RNOWServiceReference.GetMetaDataLastChangeTimeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RNOWServiceReference\StericycleColorPicker.RNOWServiceReference.GetMetaDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RNOWServiceReference\StericycleColorPicker.RNOWServiceReference.GetPrimaryClassNamesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RNOWServiceReference\StericycleColorPicker.RNOWServiceReference.GetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RNOWServiceReference\StericycleColorPicker.RNOWServiceReference.GetSubscribableObjectsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RNOWServiceReference\StericycleColorPicker.RNOWServiceReference.GetValuesForNamedIDHierarchyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RNOWServiceReference\StericycleColorPicker.RNOWServiceReference.GetValuesForNamedIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RNOWServiceReference\StericycleColorPicker.RNOWServiceReference.MetaDataClass.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RNOWServiceReference\StericycleColorPicker.RNOWServiceReference.MetaDataClassOperation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RNOWServiceReference\StericycleColorPicker.RNOWServiceReference.NamedID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RNOWServiceReference\StericycleColorPicker.RNOWServiceReference.NamedIDWithParent.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RNOWServiceReference\StericycleColorPicker.RNOWServiceReference.QueryCSVResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RNOWServiceReference\StericycleColorPicker.RNOWServiceReference.QueryObjectsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RNOWServiceReference\StericycleColorPicker.RNOWServiceReference.QueryResultData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RNOWServiceReference\StericycleColorPicker.RNOWServiceReference.ResetContactPasswordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RNOWServiceReference\StericycleColorPicker.RNOWServiceReference.RNObject.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RNOWServiceReference\StericycleColorPicker.RNOWServiceReference.RNObjectType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RNOWServiceReference\StericycleColorPicker.RNOWServiceReference.RunAnalyticsReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RNOWServiceReference\StericycleColorPicker.RNOWServiceReference.SendMailingToContactResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RNOWServiceReference\StericycleColorPicker.RNOWServiceReference.SubscribableObject.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RNOWServiceReference\StericycleColorPicker.RNOWServiceReference.TransferSubObjectsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RNOWServiceReference\StericycleColorPicker.RNOWServiceReference.UpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Service References\RNOWServiceReference\RightNow.wsdl" />
+    <None Include="Service References\RNOWServiceReference\soap.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RNOWServiceReference\soap1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RNOWServiceReference\soap2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RNOWServiceReference\soap3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RNOWServiceReference\soap4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RNOWServiceReference\soap5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RNOWServiceReference\soap6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\RNOWServiceReference\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>rmdir /S /Q "%25USERPROFILE%25\RightNowDev\AddIns\$(ProjectName)"
+mkdir "%25USERPROFILE%25\RightNowDev\AddIns\$(ProjectName)"
+copy /Y "$(TargetDir)\$(TargetName).*" "%25USERPROFILE%25\RightNowDev\AddIns\$(ProjectName)"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
